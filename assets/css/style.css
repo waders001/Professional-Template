@@ -13,7 +13,7 @@
     --gray-700: #334155;
     --gray-900: #0f172a;
     --white: #ffffff;
-    --gradient: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    --gradient: linear-gradient(135deg, var(--primary) 0%, var(--primary-hover) 100%);
     --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
     --shadow-md: 0 4px 20px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 40px rgba(0,0,0,0.12);
@@ -640,45 +640,93 @@ main {
 }
 
 /* ============================================
-   DARK MODE
+   DARK MODE (refined)
    ============================================ */
 [data-theme="dark"] {
-    --primary: #818cf8;
-    --primary-hover: #6366f1;
-    --primary-light: #1e1b4b;
-    --dark: #f1f5f9;
-    --gray-50: #0f172a;
-    --gray-100: #1e293b;
-    --gray-200: #334155;
-    --gray-300: #475569;
-    --gray-500: #94a3b8;
-    --gray-700: #cbd5e1;
-    --gray-900: #0f172a;
-    --white: #1e293b;
-    --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 20px rgba(0,0,0,0.4);
-    --shadow-lg: 0 10px 40px rgba(0,0,0,0.5);
+    /* Softer, less intense purple palette */
+    --primary: #a78bfa;        /* purple-400 – gentle but visible */
+    --primary-hover: #8b5cf6;  /* violet-500 – subtle hover */
+    --primary-light: #2e1065;  /* deep violet bg for icons */
+
+    /* Text & backgrounds */
+    --dark: #f8fafc;           /* headings, very light */
+    --gray-50: #0f172a;        /* deepest bg */
+    --gray-100: #1e293b;       /* card backgrounds */
+    --gray-200: #334155;       /* borders */
+    --gray-300: #64748b;       /* muted borders, placeholder */
+    --gray-500: #94a3b8;       /* secondary text (good contrast) */
+    --gray-700: #e2e8f0;       /* main body text – high contrast */
+    --gray-900: #0f172a;       /* footer bg */
+
+    --white: #1e293b;          /* surfaces that were white */
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.5);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.6);
+    --shadow-lg: 0 10px 40px rgba(0,0,0,0.7);
 }
 
+/* Override body text to use the lighter --gray-700 */
 [data-theme="dark"] body {
+    color: var(--gray-700);
     background-color: #0f172a;
-    color: var(--gray-300);
 }
 
+/* Make sure headings use the new --dark */
+[data-theme="dark"] h1,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3,
+[data-theme="dark"] h4,
+[data-theme="dark"] .header__logo,
+[data-theme="dark"] .section__title,
+[data-theme="dark"] .story__title,
+[data-theme="dark"] .feature-card__title,
+[data-theme="dark"] .cta__title,
+[data-theme="dark"] .pricing-card__price,
+[data-theme="dark"] .contact__heading,
+[data-theme="dark"] .contact-form__title,
+[data-theme="dark"] .faq-item__question,
+[data-theme="dark"] .testimonial-card__author strong {
+    color: var(--dark);
+}
+
+/* Secondary text already uses var(--gray-500) – remains as is,
+   but we’ll slightly brighten it for readability. */
+[data-theme="dark"] .section__subtitle,
+[data-theme="dark"] .hero__description,
+[data-theme="dark"] .story__text,
+[data-theme="dark"] .feature-card__text,
+[data-theme="dark"] .value-card p,
+[data-theme="dark"] .team-card__bio,
+[data-theme="dark"] .service-detail__content > p,
+[data-theme="dark"] .pricing-card__desc,
+[data-theme="dark"] .testimonial-card__text,
+[data-theme="dark"] .footer__description,
+[data-theme="dark"] .footer__links a,
+[data-theme="dark"] .footer__newsletter p,
+[data-theme="dark"] .contact__text,
+[data-theme="dark"] .contact-method a,
+[data-theme="dark"] .contact-method span {
+    color: var(--gray-500);
+}
+
+/* Borders and hover states */
 [data-theme="dark"] .header {
     background: rgba(15, 23, 42, 0.92);
     border-bottom-color: var(--gray-200);
 }
-
 [data-theme="dark"] .header__link {
-    color: var(--gray-300);
+    color: var(--gray-700);
+}
+[data-theme="dark"] .header__link:hover,
+[data-theme="dark"] .header__link.active {
+    color: var(--primary);
+    background: var(--primary-light);
 }
 
+/* Backgrounds */
 [data-theme="dark"] .hero,
 [data-theme="dark"] .page-header {
     background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
 }
-
 [data-theme="dark"] .feature-card,
 [data-theme="dark"] .value-card,
 [data-theme="dark"] .team-card,
@@ -686,15 +734,13 @@ main {
 [data-theme="dark"] .pricing-card,
 [data-theme="dark"] .testimonial-card,
 [data-theme="dark"] .faq-item {
-    background: #1e293b;
+    background: var(--gray-100);
     border-color: var(--gray-200);
 }
-
 [data-theme="dark"] .contact-form {
-    background: #1e293b;
+    background: var(--gray-100);
     border-color: var(--gray-200);
 }
-
 [data-theme="dark"] .contact-form__group input,
 [data-theme="dark"] .contact-form__group select,
 [data-theme="dark"] .contact-form__group textarea {
@@ -703,29 +749,28 @@ main {
     color: var(--white);
 }
 
+/* Scrollbar */
+[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #475569;
+}
+
+/* Theme toggle button */
 [data-theme="dark"] .theme-toggle {
     background: #1e293b;
     border-color: var(--gray-200);
     color: var(--gray-300);
 }
 
+/* Placeholder images / dashed borders */
 [data-theme="dark"] .portfolio-item__placeholder,
 [data-theme="dark"] .hero__placeholder,
 [data-theme="dark"] .story__placeholder {
     background: #1e293b;
     border-color: var(--gray-300);
-}
-
-[data-theme="dark"] .stat__number {
-    color: var(--primary);
-}
-
-[data-theme="dark"] ::-webkit-scrollbar-track {
-    background: #1e293b;
-}
-
-[data-theme="dark"] ::-webkit-scrollbar-thumb {
-    background: #475569;
+    color: var(--gray-500);
 }
 
 /* ============================================
