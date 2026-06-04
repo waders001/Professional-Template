@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Us — Get in touch and let's start a conversation">
+    <title>Contact — SiteName</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader" id="preloader"><div class="preloader__spinner"><i class="fa-solid fa-cube"></i></div></div>
+
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo"><i class="fa-solid fa-cube"></i> SiteName</a>
+            <nav class="header__nav" id="nav-menu">
+                <ul class="header__list">
+                    <li><a href="index.html" class="header__link">Home</a></li>
+                    <li><a href="about.html" class="header__link">About</a></li>
+                    <li><a href="services.html" class="header__link">Services</a></li>
+                    <li><a href="portfolio.html" class="header__link">Portfolio</a></li>
+                    <li><a href="contact.html" class="header__link active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+                <a href="contact.html" class="btn btn--primary btn--sm">Get Started</a>
+                <button class="header__toggle" id="nav-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header"><div class="container"><h1 class="page-header__title reveal">Get In Touch</h1><p class="page-header__subtitle reveal">Have a project in mind? We'd love to hear about it.</p></div></section>
+
+        <section class="contact section">
+            <div class="container">
+                <div class="contact__grid">
+                    <div class="contact__info reveal">
+                        <h2 class="contact__heading">Let's Talk</h2>
+                        <p class="contact__text">Fill out the form and we'll get back to you within 24 hours. Prefer to reach out directly? Use any of the methods below.</p>
+                        <div class="contact__methods">
+                            <div class="contact-method"><div class="contact-method__icon"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:hello@sitename.com">hello@sitename.com</a></div></div>
+                            <div class="contact-method"><div class="contact-method__icon"><i class="fa-solid fa-phone"></i></div><div><h4>Phone</h4><a href="tel:+15551234567">+1 (555) 123-4567</a></div></div>
+                            <div class="contact-method"><div class="contact-method__icon"><i class="fa-solid fa-location-dot"></i></div><div><h4>Office</h4><span>123 Business Ave, Suite 100<br>San Francisco, CA 94107</span></div></div>
+                        </div>
+                        <div class="contact__social"><h4>Follow Us</h4><div class="contact__social-links"><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div>
+                    </div>
+                    <div class="contact__form-wrapper reveal">
+                        <form class="contact-form" id="contact-form">
+                            <h3 class="contact-form__title">Send a Message</h3>
+                            <div class="contact-form__row">
+                                <div class="contact-form__group"><label for="name">Full Name *</label><input type="text" id="name" name="name" placeholder="John Doe" required></div>
+                                <div class="contact-form__group"><label for="email">Email Address *</label><input type="email" id="email" name="email" placeholder="john@example.com" required></div>
+                            </div>
+                            <div class="contact-form__group"><label for="subject">Subject</label><input type="text" id="subject" name="subject" placeholder="How can we help?"></div>
+                            <div class="contact-form__group"><label for="service">Service Interested In</label><select id="service" name="service"><option value="">Select a service...</option><option value="web">Web Development</option><option value="app">Mobile App Development</option><option value="design">UI/UX Design</option><option value="seo">SEO & Marketing</option><option value="other">Other</option></select></div>
+                            <div class="contact-form__group"><label for="message">Message *</label><textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea></div>
+                            <button type="submit" class="btn btn--primary contact-form__submit"><i class="fa-solid fa-paper-plane"></i> Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq section">
+            <div class="container">
+                <div class="section__header reveal"><h2 class="section__title">Frequently Asked Questions</h2><p class="section__subtitle">Quick answers to common questions.</p></div>
+                <div class="faq__grid">
+                    <div class="faq-item reveal"><h3 class="faq-item__question"><i class="fa-solid fa-circle-question"></i> What is your typical project timeline?</h3><p class="faq-item__answer">Most projects take 4–8 weeks from kickoff to launch, depending on complexity. We'll provide a detailed timeline during the planning phase.</p></div>
+                    <div class="faq-item reveal"><h3 class="faq-item__question"><i class="fa-solid fa-circle-question"></i> Do you offer ongoing support?</h3><p class="faq-item__answer">Yes! All our packages include a support period, and we offer extended maintenance plans for long-term partnerships.</p></div>
+                    <div class="faq-item reveal"><h3 class="faq-item__question"><i class="fa-solid fa-circle-question"></i> Can you work with our existing brand?</h3><p class="faq-item__answer">Absolutely. We adapt to your brand guidelines or can help create a fresh identity if needed.</p></div>
+                    <div class="faq-item reveal"><h3 class="faq-item__question"><i class="fa-solid fa-circle-question"></i> What do you need from us to get started?</h3><p class="faq-item__answer">Just an idea of what you want to achieve! We'll guide you through the rest with a structured discovery process.</p></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand"><a href="index.html" class="footer__logo"><i class="fa-solid fa-cube"></i> SiteName</a><p class="footer__description">A professional website template built with care. Clean, modern, and ready for anything.</p><div class="footer__social"><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div>
+            <div class="footer__links"><h4 class="footer__heading">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></div>
+            <div class="footer__links"><h4 class="footer__heading">Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">FAQ</a></li></ul></div>
+            <div class="footer__newsletter"><h4 class="footer__heading">Newsletter</h4><p>Subscribe for updates and news.</p><form class="footer__form" id="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit" class="btn btn--primary btn--sm">Subscribe</button></form></div>
+        </div>
+        <div class="footer__bottom"><div class="container"><p>&copy; 2026 SiteName. All rights reserved. — Professional Template</p></div></div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

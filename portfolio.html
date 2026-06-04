@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio — Showcase of our best work and case studies">
+    <title>Portfolio — SiteName</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader" id="preloader"><div class="preloader__spinner"><i class="fa-solid fa-cube"></i></div></div>
+
+    <header class="header" id="header">
+        <div class="container header__container">
+            <a href="index.html" class="header__logo"><i class="fa-solid fa-cube"></i> SiteName</a>
+            <nav class="header__nav" id="nav-menu">
+                <ul class="header__list">
+                    <li><a href="index.html" class="header__link">Home</a></li>
+                    <li><a href="about.html" class="header__link">About</a></li>
+                    <li><a href="services.html" class="header__link">Services</a></li>
+                    <li><a href="portfolio.html" class="header__link active">Portfolio</a></li>
+                    <li><a href="contact.html" class="header__link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header__actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"><i class="fa-solid fa-moon"></i></button>
+                <a href="contact.html" class="btn btn--primary btn--sm">Get Started</a>
+                <button class="header__toggle" id="nav-toggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header"><div class="container"><h1 class="page-header__title reveal">Our Portfolio</h1><p class="page-header__subtitle reveal">A selection of projects we're proud to have delivered.</p></div></section>
+        <section class="portfolio-filter section"><div class="container"><div class="filter-tabs"><button class="filter-tab active" data-filter="all">All Work</button><button class="filter-tab" data-filter="web">Web Design</button><button class="filter-tab" data-filter="app">Mobile Apps</button><button class="filter-tab" data-filter="branding">Branding</button></div></div></section>
+        <section class="portfolio-grid section">
+            <div class="container">
+                <div class="portfolio__items">
+                    <article class="portfolio-item reveal" data-category="web"><div class="portfolio-item__image"><div class="portfolio-item__placeholder"><i class="fa-solid fa-image"></i></div><div class="portfolio-item__overlay"><span class="portfolio-item__category">Web Design</span><h3>E-Commerce Platform Redesign</h3><a href="#" class="portfolio-item__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="portfolio-item reveal" data-category="app"><div class="portfolio-item__image"><div class="portfolio-item__placeholder"><i class="fa-solid fa-image"></i></div><div class="portfolio-item__overlay"><span class="portfolio-item__category">Mobile App</span><h3>Fitness Tracking App</h3><a href="#" class="portfolio-item__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="portfolio-item reveal" data-category="branding"><div class="portfolio-item__image"><div class="portfolio-item__placeholder"><i class="fa-solid fa-image"></i></div><div class="portfolio-item__overlay"><span class="portfolio-item__category">Branding</span><h3>Startup Brand Identity</h3><a href="#" class="portfolio-item__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="portfolio-item reveal" data-category="web"><div class="portfolio-item__image"><div class="portfolio-item__placeholder"><i class="fa-solid fa-image"></i></div><div class="portfolio-item__overlay"><span class="portfolio-item__category">Web Design</span><h3>SaaS Landing Page</h3><a href="#" class="portfolio-item__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="portfolio-item reveal" data-category="app"><div class="portfolio-item__image"><div class="portfolio-item__placeholder"><i class="fa-solid fa-image"></i></div><div class="portfolio-item__overlay"><span class="portfolio-item__category">Mobile App</span><h3>Food Delivery App</h3><a href="#" class="portfolio-item__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                    <article class="portfolio-item reveal" data-category="branding"><div class="portfolio-item__image"><div class="portfolio-item__placeholder"><i class="fa-solid fa-image"></i></div><div class="portfolio-item__overlay"><span class="portfolio-item__category">Branding</span><h3>Corporate Rebrand</h3><a href="#" class="portfolio-item__link">View Case Study <i class="fa-solid fa-arrow-right"></i></a></div></div></article>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section__header reveal"><h2 class="section__title">What Clients Say</h2><p class="section__subtitle">Feedback from people we've worked with.</p></div>
+                <div class="testimonials__grid">
+                    <div class="testimonial-card reveal reveal-delay-1"><div class="testimonial-card__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="testimonial-card__text">"Working with this team was an absolute pleasure. They delivered beyond our expectations and the communication throughout was excellent."</p><div class="testimonial-card__author"><strong>Sarah Mitchell</strong><span>CEO, TechVentures</span></div></div>
+                    <div class="testimonial-card reveal reveal-delay-2"><div class="testimonial-card__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="testimonial-card__text">"Professional, creative, and fast. They understood our vision from day one and turned it into something truly special."</p><div class="testimonial-card__author"><strong>David Kim</strong><span>Founder, GreenLeaf</span></div></div>
+                    <div class="testimonial-card reveal reveal-delay-3"><div class="testimonial-card__stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="testimonial-card__text">"The results speak for themselves. Our traffic doubled and conversions increased by 40% after the redesign. Highly recommend."</p><div class="testimonial-card__author"><strong>Laura Bennett</strong><span>Marketing Director, Apex</span></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__brand"><a href="index.html" class="footer__logo"><i class="fa-solid fa-cube"></i> SiteName</a><p class="footer__description">A professional website template built with care. Clean, modern, and ready for anything.</p><div class="footer__social"><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a><a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></div></div>
+            <div class="footer__links"><h4 class="footer__heading">Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="services.html">Services</a></li><li><a href="portfolio.html">Portfolio</a></li></ul></div>
+            <div class="footer__links"><h4 class="footer__heading">Support</h4><ul><li><a href="contact.html">Contact</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">FAQ</a></li></ul></div>
+            <div class="footer__newsletter"><h4 class="footer__heading">Newsletter</h4><p>Subscribe for updates and news.</p><form class="footer__form" id="newsletter-form"><input type="email" placeholder="Your email" required><button type="submit" class="btn btn--primary btn--sm">Subscribe</button></form></div>
+        </div>
+        <div class="footer__bottom"><div class="container"><p>&copy; 2026 SiteName. All rights reserved. — Professional Template</p></div></div>
+    </footer>
+
+    <button class="scroll-top" id="scroll-top" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
